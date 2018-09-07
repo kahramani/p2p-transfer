@@ -1,0 +1,122 @@
+{
+	"info": {
+		"_postman_id": "488af4ff-1221-4934-a169-ff06976b217e",
+		"name": "p2p",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Transfer",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "d40fbcbe-e741-44c3-9cd6-dd9d0309a8b3",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "eb401577-04ce-4d81-859d-c71986cd1f32",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"userName\": \"taavet\",\n\t\"amount\": 10.2,\n\t\"toCurrency\": \"TRY\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/accounts/{ACCOUNT_REFERENCE}/transfers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"accounts",
+						"{ACCOUNT_REFERENCE}",
+						"transfers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve Transfer",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "d40fbcbe-e741-44c3-9cd6-dd9d0309a8b3",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "eb401577-04ce-4d81-859d-c71986cd1f32",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\n\t\"mobilePhone\": \"+442033228352\",\n\t\"yenideger\": \"0\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/transfers/{TRANSFER_REFERENCE}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"transfers",
+						"{TRANSFER_REFERENCE}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
